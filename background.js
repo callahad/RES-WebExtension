@@ -241,6 +241,11 @@ chrome.runtime.onMessage.addListener(
 				}
 				break;
 			case 'permissions':
+				// See Bug 1197420
+				if (!chrome.permissions) {
+					break;
+				}
+
 				if (request.action === 'remove') {
 					chrome.permissions.remove(request.data, function(removed) {
 						request.result = removed;
