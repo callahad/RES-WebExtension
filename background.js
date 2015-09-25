@@ -96,7 +96,10 @@ var handlePageActionClick = function(event) {
 	});
 };
 
-chrome.pageAction.onClicked.addListener(handlePageActionClick);
+// See Bug 1197422: pageAction is not implemented
+if (chrome.pageAction) {
+	chrome.pageAction.onClicked.addListener(handlePageActionClick);
+}
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
@@ -267,6 +270,11 @@ chrome.runtime.onMessage.addListener(
 				}
 				break;
 			case 'pageAction':
+				// See Bug 1197422: pageAction is not implemented
+				if (!chrome.pageAction) {
+					break;
+				}
+
 				switch (request.action) {
 					case 'show':
 						chrome.pageAction.show(sender.tab.id);
