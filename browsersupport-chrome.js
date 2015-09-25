@@ -149,6 +149,8 @@ RESUtils.runtime.sendMessage = function(thisJSON) {
 	chrome.runtime.sendMessage(thisJSON);
 };
 
+/* Use generic fallback method from browsersupport.js
+ * See Bug 1197417
 RESUtils.runtime.deleteCookie = function(cookieName) {
 	var deferred = new $.Deferred();
 
@@ -163,7 +165,7 @@ RESUtils.runtime.deleteCookie = function(cookieName) {
 
 	return deferred;
 };
-
+*/
 
 RESUtils.runtime.openInNewWindow = function(thisHREF) {
 	var thisJSON = {
