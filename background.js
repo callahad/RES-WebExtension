@@ -232,7 +232,10 @@ chrome.runtime.onMessage.addListener(
 				}
 				break;
 			case 'addURLToHistory':
-				chrome.history.addUrl({url: request.url});
+				// See Bug 1208334
+				if (chrome.history && chrome.history.addURL) {
+					chrome.history.addUrl({url: request.url});
+				}
 				break;
 			case 'permissions':
 				if (request.action === 'remove') {
