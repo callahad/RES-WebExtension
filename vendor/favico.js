@@ -838,7 +838,7 @@
 	}
 	// included directly via <script> tag
 	else {
-		this.Favico = Favico;
+		window.Favico = Favico;
 	}
 
 })();
