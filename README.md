@@ -6,7 +6,7 @@ This is based on a snapshot of [RES at 4ac07e6403de818af22d3822e460c260030e2028]
 
 [Bug 1208765](https://bugzilla.mozilla.org/1208765) contains a list of bugs that need to be fixed for upstream RES to work without modification.
 
-See all of [my changes compared to upstream](https://github.com/callahad/RES-WebExtension/compare/d522ae38f54ccede1a96b68f75385ecf03c40171...master).
+See all of [my changes compared to upstream](https://github.com/callahad/RES-WebExtension/compare/6df68b199f9ae12bcfdc3ec8f6d05ed79fb69f20...master).
 
 For more info on WebExtensions, Firefox's new Chrome-compatible add-on API, see https://wiki.mozilla.org/WebExtensions
 
