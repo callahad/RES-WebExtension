@@ -863,20 +863,20 @@ blobs["core/templates.html"] = `<!doctype html>
 			#progressIndicator .RESThrobber { margin-top: 10px; margin-bottom: 0; }
 			#NREPause { cursor: pointer; }
 			#NREPause::after { font: normal 100% Batch; color: #888; display: block; width: 10px; height: 10px; padding: 0 2px 4px; margin: 3px; border: 1px solid #888; border-radius: 50%; }
-			#NREPause::after, #NREPause.paused.reversePause::after { content: "\F16C"; }
-			#NREPause.paused::after, #NREPause.reversePause::after { content: "\F16B"; }
+			#NREPause::after, #NREPause.paused.reversePause::after { content: "\\F16C"; }
+			#NREPause.paused::after, #NREPause.reversePause::after { content: "\\F16B"; }
 		</style>
 
 		<style type="text/css" id="searchHelper-searchPageTabs">
 			/* reddit search page tabs */
 			ul.res-search-tabs li.res-search-tab-facets a:before {
-				content: "\F0B7";
+				content: "\\F0B7";
 			}
 			ul.res-search-tabs li.res-search-tab-subs a:before {
-				content: "\F030";
+				content: "\\F030";
 			}
 			ul.res-search-tabs li.res-search-tab-options a:before {
-				content: "\F06B";
+				content: "\\F06B";
 			}
 
 			.search-page .searchpane { height: auto; }
