@@ -183,10 +183,8 @@ RESUtils.runtime.addURLToHistory = (function() {
 	var original = RESUtils.runtime.addURLToHistory;
 
 	return function(url) {
-		// See Bug 1208563
-		// Skip when isIncognitoContext is true || undefined
-		if (chrome.extension.inIncognitoContext !== false) {
-			return
+		if (chrome.extension.inIncognitoContext) {
+			return;
 		}
 
 		original(url);
